@@ -72,9 +72,14 @@ export const Index = () => {
           <h1 className='font-bold text-center text-3xl pb-20'>¿Qué es &lt;CodeTrain/&gt;?</h1>
 
           <div className='flex flex-col space-y-5'>
-            <HorizontalCardComponent orientation={1} cardTitle='¿Sobre que va la plataforma?' title='' description='El proyecto consiste en crear “CodeTrain” una plataforma inteligente e interactiva para la enseñanza de programación que incorpore interacción con modelos IA de lenguaje multimodal, capaz de ofrecer un entorno enriquecedor y dinámico para aprender a programar de manera efectiva y atractiva. Este tipo de sistema no solo proporcionará instrucción y recursos educativos, sino que también facilitará la interacción directa con un asistente de inteligencia artificial para resolver dudas, obtener ejemplos de código y practicar la escritura de programas y probarlos en tiempo real.' />
-            <HorizontalCardComponent cardTitle='¿Sobre que va la plataforma?' title='' description='El proyecto consiste en crear “CodeTrain” una plataforma inteligente e interactiva para la enseñanza de programación que incorpore interacción con modelos IA de lenguaje multimodal, capaz de ofrecer un entorno enriquecedor y dinámico para aprender a programar de manera efectiva y atractiva. Este tipo de sistema no solo proporcionará instrucción y recursos educativos, sino que también facilitará la interacción directa con un asistente de inteligencia artificial para resolver dudas, obtener ejemplos de código y practicar la escritura de programas y probarlos en tiempo real.' />
-            <HorizontalCardComponent orientation={1} cardTitle='¿Sobre que va la plataforma?' title='' description='El proyecto consiste en crear “CodeTrain” una plataforma inteligente e interactiva para la enseñanza de programación que incorpore interacción con modelos IA de lenguaje multimodal, capaz de ofrecer un entorno enriquecedor y dinámico para aprender a programar de manera efectiva y atractiva. Este tipo de sistema no solo proporcionará instrucción y recursos educativos, sino que también facilitará la interacción directa con un asistente de inteligencia artificial para resolver dudas, obtener ejemplos de código y practicar la escritura de programas y probarlos en tiempo real.' />
+            <HorizontalCardComponent orientation={1} cardTitle='¿Sobre que va la plataforma?' title='' description='CodeTrain es una plataforma inteligente e interactiva para la enseñanza de programación que incorpora interacción con modelos IA de lenguaje multimodal, capaz de ofrecer un entorno enriquecedor y dinámico para aprender a programar de manera efectiva y atractiva.
+            No solo proporcionamos instrucción y recursos educativos, sino que también facilitamos la interacción directa con un asistente de inteligencia artificial para resolver dudas, obtener ejemplos de código y practicar la escritura de programas y probarlos en tiempo real.' />
+
+            <HorizontalCardComponent cardTitle='¿Qué cursos ofrecemos?' title='Algunos de nuestros cursos disponibles al publico'>
+
+            </HorizontalCardComponent>
+
+            <HorizontalCardComponent orientation={1} cardTitle='¿De que funcionalidades dispondras?' title='' description='' />
           </div>
         </section>
       </main>
