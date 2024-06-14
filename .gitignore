@@ -1,0 +1,7 @@
+./'server AI'/env
+./server/node_modules
+./'server AI'/clave.py
+./serverOllama/node_modules
+./'server AI'/env
+serverOllama/node_modules
+./serverOllama/.env

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    color: #fff;
+    background: #1f1934
+}
+
+main{
+    background: #393a47;
+    height: 100vh;
+    height: 100dvh;
+}
