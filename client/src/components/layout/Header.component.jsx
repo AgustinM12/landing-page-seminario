@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 import logo from '../../assets/images/trainlogo.png';
-import "../../assets/css/Header.css"; 
+import "../../assets/css/Header.css";
 
 
 
@@ -35,13 +35,15 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-blue-900">
-      <nav className="mx-auto flex flex-wrap max-w-7xl items-center justify-between p-1 lg:px-6" aria-label="Global">
+    <header className="bg-blue-900 max-h-24">
+      <nav className="mx-auto flex flex-wrap max-w-screen items-center justify-between p-1 lg:px-6" aria-label="Global">
         <div className="flex lg:flex-1">
           <a className="-m-2.5 p-2.5" href="#">
-            <img className="w-32 " src={logo} alt="Logo" />
+            <img className="w-32 h-12" src={logo} alt="Logo" />
           </a>
         </div>
+
+        {/* //! BURGER MENU */}
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -52,9 +54,11 @@ const Header = () => {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+
+
         <Popover.Group className="hidden lg:flex lg:gap-x-8">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white button hover:text-cyan-400 ">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-4 text-white button hover:text-cyan-400 ">
               Cursos
               <ChevronDownIcon className="h-5 w-5 flex-none text-white" aria-hidden="true" />
             </Popover.Button>
@@ -69,7 +73,7 @@ const Header = () => {
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-5 w-screen max-w-md overflow-hidden rounded-2xl bg-slate-800 shadow-lg ring-1 ring-gray-900/5">
-                <div className="p-4">
+                <div className="p-2">
                   {cursos.map((item) => (
                     <div
                       key={item.name}
@@ -114,84 +118,88 @@ const Header = () => {
             Contacto
           </a>
         </Popover.Group>
+
+        
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="/login" className="text-sm font-semibold leading-6 text-white button hover:text-cyan-400 ">
             Ingresar <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </nav>
-      <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">devMentor</span>
-              <img className="h-8 w-auto" src={logo} alt="Logo" />
-            </a>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Cursos
-                        <ChevronDownIcon
-                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
-                          aria-hidden="true"
-                        />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="mt-2 space-y-2">
-                        {cursos.map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        ))}
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Información
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Nosotros
-                </a>
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Ingresar
-                </a>
-              </div>
-            </div>
-          </div>
-        </Dialog.Panel>
-      </Dialog>
+
+
     </header>
   );
 };
 
+{/*     <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+  <div className="fixed inset-0 z-10" />
+  <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+    <div className="flex items-center justify-between">
+      <a href="#" className="-m-1.5 p-1.5">
+        <span className="sr-only">devMentor</span>
+        <img className="h-8 w-auto" src={logo} alt="Logo" />
+      </a>
+      <button
+        type="button"
+        className="-m-2.5 rounded-md p-2.5 text-gray-700"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        <span className="sr-only">Close menu</span>
+        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+      </button>
+    </div>
+    <div className="mt-6 flow-root">
+      <div className="-my-6 divide-y divide-gray-500/10">
+        <div className="space-y-2 py-6">
+          <Disclosure as="div" className="-mx-3">
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                  Cursos
+                  <ChevronDownIcon
+                    className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
+                    aria-hidden="true"
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className="mt-2 space-y-2">
+                  {cursos.map((item) => (
+                    <Disclosure.Button
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name}
+                    </Disclosure.Button>
+                  ))}
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
+          <a
+            href="#"
+            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+          >
+            Información
+          </a>
+          <a
+            href="#"
+            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+          >
+            Nosotros
+          </a>
+        </div>
+        <div className="py-6">
+          <a
+            href="#"
+            className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+          >
+            Ingresar
+          </a>
+        </div>
+      </div>
+    </div>
+  </Dialog.Panel>
+</Dialog> */}
 export default Header;
