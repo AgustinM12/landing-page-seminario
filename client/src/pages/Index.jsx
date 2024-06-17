@@ -44,37 +44,31 @@ export const Index = () => {
   return (
     <>
       <Header />
-      <main className="mt-minus-20 align-items-center bg-gray-200" onDoubleClick={handleViewMoreClick}>
+      <main className="mt-minus-20 bg-gray-200" onDoubleClick={handleViewMoreClick}>
         <section className='h-screen'>
-          <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
-            <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-              <div className="sm:max-w-lg pb-2">
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                  Potencia tu productividad con  &lt;CodeTrain/&gt;
-                </h1>
-                <p className="mt-4 text-xl text-gray-500">
-                  La aplicación de chat de IA de última generación, lleva tu rendimiento al siguiente nivel.
-                </p>
-              </div>
+          <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-20 lg:pt-20">
 
-              {/* //* ROBOT */}
-              <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                <div className="relative">
-                  <div className=" flex-shrink-0 grid-cols-5 gap-y-10 lg:gap-y-5 ">
-                    <div className="p-10 w-full overflow-hidden rounded-lg">
-                      <div className="h-auto w-auto max-w-full max-h-full object-cover object-center">
-                        <LottiePlayer />
-                      </div>
-                    </div>
+            <div className="max-w-screen px-4 sm:static sm:px-6 lg:px-8">
+              <div className="pb-2">
+
+                <div className='flex flex-row justify-between'>
+                  <div className='max-w-lg'>
+                    <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl max-w-lg">
+                      Potencia tu productividad con &lt;CodeTrain/&gt;
+                    </h1>
+                    <p className="mt-4 text-xl text-gray-500 pb-4">
+                      La aplicación de chat de IA de última generación, lleva tu rendimiento al siguiente nivel.
+                    </p>
+                    <button
+                      onClick={handleViewMoreClick}
+                      className="inline-block rounded-md border border-transparent bg-blue-700 px-8 py-4 text-center font-medium text-white hover:bg-blue-900 transition-all duration-300 hover:scale-110 "
+                    >Ver más</button>
+                  </div>
+                  <div className='px-16 '>
+                    <LottiePlayer />
                   </div>
                 </div>
               </div>
-
-              <button
-                onClick={handleViewMoreClick}
-                className="inline-block rounded-md border border-transparent bg-blue-800 px-8 py-4 text-center font-medium text-white hover:bg-blue-900"
-              >Ver más</button>
-
             </div>
           </div>
           <CourseCard />
@@ -83,13 +77,23 @@ export const Index = () => {
 
         {/* //! MAS INFORMACION */}
         <section ref={secondSectionRef} className='bg-slate-800 text-center pt-5 p-10'>
-          <h1 className='font-bold text-center text-white text-3xl pb-20'>¿Qué es &lt;CodeTrain/&gt;?</h1>
+          <h1 className='font-bold text-center text-white text-3xl pb-20'>¿Qué es <span className='font-bold bg-gradient-to-t from-red-500 to-fuchsia-500 via-cyan-300 text-transparent bg-clip-text'>&lt;CodeTrain/&gt;</span>?</h1>
 
           <div className='flex flex-col space-y-5'>
-            <HorizontalCardComponent orientation={1} img='https://th.bing.com/th/id/OIP.OC4Bv5A3iYKPvSQFaWjwVwHaHc?w=634&h=638&rs=1&pid=ImgDetMain' cardTitle='¿Sobre que va la plataforma?' title='¡Conoce a &lt;CodeTrain/&gt;!' description='CodeTrain es una plataforma inteligente e interactiva para la enseñanza de programación que incorpora interacción con modelos IA de lenguaje multimodal, capaz de ofrecer un entorno enriquecedor y dinámico para aprender a programar de manera efectiva y atractiva.
+            <HorizontalCardComponent orientation={1} img='https://th.bing.com/th/id/OIP.OC4Bv5A3iYKPvSQFaWjwVwHaHc?w=634&h=638&rs=1&pid=ImgDetMain' cardTitle='¿Sobre que va la plataforma?' title='¡Conoce a &lt;CodeTrain/&gt;!' description='CodeTrain es una plataforma de cursos y formaciones inteligente e interactiva para la enseñanza de programación que incorpora interacción con modelos IA de lenguaje multimodal, capaz de ofrecer un entorno enriquecedor y dinámico para aprender a programar de manera efectiva y atractiva.
             No solo proporcionamos instrucción y recursos educativos, sino que también facilitamos la interacción directa con un asistente de inteligencia artificial para resolver dudas, obtener ejemplos de código y practicar la escritura de programas y probarlos en tiempo real.' />
 
-            <HorizontalCardComponent cardTitle='¿Qué cursos ofrecemos?' img='https://th.bing.com/th/id/OIP.OC4Bv5A3iYKPvSQFaWjwVwHaHc?w=634&h=638&rs=1&pid=ImgDetMain' title='Algunos de nuestros cursos disponibles al publico'>
+            <HorizontalCardComponent orientation={0} img='https://th.bing.com/th/id/OIP.1qrtVjrTZ8lgiaU80kcGQgHaHa?w=980&h=980&rs=1&pid=ImgDetMain' cardTitle='Deberias probarla si...' title='Apuntamos a ser una herramienta util para:' >
+              <div className='flex flex-col justify-start text-start'>
+                <li>Educadores e Instituciones educativas públicas o privadas.</li>
+                <li>Autodidactas y entusiastas de la programación.</li>
+                <li>Profesionales en Transición de Carrera.</li>
+                <li>Desarrolladores de Software Junior.</li>
+                <li>Estudiantes Universitarios y de Programación.</li>
+              </div>
+            </HorizontalCardComponent>
+
+            <HorizontalCardComponent orientation={1} cardTitle='¿Qué cursos ofrecemos?' img='https://ga.com.mx/wp-content/uploads/2016/05/training.png' title='Algunos de nuestros cursos disponibles al publico'>
 
               {
                 randomTemas?.map((tema, key) => (
@@ -99,16 +103,30 @@ export const Index = () => {
 
             </HorizontalCardComponent>
 
-            <HorizontalCardComponent orientation={1} img='https://th.bing.com/th/id/OIP.OC4Bv5A3iYKPvSQFaWjwVwHaHc?w=634&h=638&rs=1&pid=ImgDetMain' cardTitle='¿De que funcionalidades dispondras?' title='Las principales funcionalidades de nuestra plataforma son:' >
+            <HorizontalCardComponent orientation={0} img='https://web3canvas.com/wp-content/uploads/2013/10/deals.jpg' cardTitle='¿De que funcionalidades dispondras?' title='Las principales funcionalidades de nuestra plataforma son:' >
               <div className='flex flex-col justify-start text-start'>
-                <li>Editor de Codigo Integrado (IDE): </li>
-                <p></p>
+                <li className='font-bold'>Editor de Codigo Integrado (IDE): </li>
+                <p>Un espacio donde los estudiantes puedan escribir, probar y depurar su código directamente en la plataforma </p>
 
-                <li>Generacion de actividades de manera adaptativa: </li>
-                <p></p>
+                <li className='font-bold'>Generacion de actividades de manera adaptativa: </li>
+                <p>Adaptación de los contenidos y los
+                  retos según el progreso y las preferencias del estudiante, utilizando
+                  algoritmos de inteligencia artificial.</p>
 
-                <li>Mentoria y correccion 24/7:</li>
-                <p></p>
+                <li className='font-bold'>Mentoria y correccion 24/7:</li>
+                <p>Evaluación inmediata de los ejercicios de codificación y selección con sugerencias de mejora y correcciones. Soporte teorico para los temas de los cursos</p>
+              </div>
+            </HorizontalCardComponent>
+
+            <HorizontalCardComponent orientation={1} img='https://th.bing.com/th/id/OIP.GBxNXSFXK4n5CC0wLoYNzgAAAA?rs=1&pid=ImgDetMain' cardTitle='¿Qué modelos de IA utilizamos?' title='Los principales modelos de lenguaje utilizados en la plataforma son:' >
+              <div className='flex flex-col justify-start text-start'>
+                <li className='font-bold'>Generacion de actividades:</li>
+                <p>Gemini AI</p>
+                <p>Llama 3</p>
+                <li className='font-bold'>Corrección de actividades:</li>
+                <p>CodeGemma</p>
+                <p>Phi 3</p>
+                <p>OpenGpt</p>
               </div>
             </HorizontalCardComponent>
           </div>

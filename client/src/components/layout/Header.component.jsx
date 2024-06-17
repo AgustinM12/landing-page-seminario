@@ -39,7 +39,7 @@ const Header = () => {
       <nav className="mx-auto flex flex-wrap max-w-screen items-center justify-between p-1 lg:px-6" aria-label="Global">
         <div className="flex lg:flex-1">
           <a className="-m-2.5 p-2.5" href="#">
-            <img className="w-32 h-12" src={logo} alt="Logo" />
+            <img className="w-32 h-20" src={logo} alt="Logo" />
           </a>
         </div>
 
