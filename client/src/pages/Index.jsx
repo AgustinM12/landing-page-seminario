@@ -17,7 +17,7 @@ export const Index = () => {
     // Clonar el array original para no modificarlo
     const shuffled = [...arr].sort(() => 0.5 - Math.random());
     // Devolver los primeros tres elementos del array mezclado
-    return shuffled.slice(0, 3);
+    return shuffled.slice(0, 4);
   };
 
   const randomTemas = getRandomThree(temas);
@@ -56,9 +56,9 @@ export const Index = () => {
                     <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl max-w-lg">
                       Potencia tu productividad con &lt;CodeTrain/&gt;
                     </h1>
-                    <title className="mt-4 text-xl text-gray-500 pb-4">
+                    <p className="mt-4 text-xl text-gray-500 pb-4">
                       La plataforma potenciada con IA para lleva tu rendimiento y aprendizaje al siguiente nivel.
-                    </title>
+                    </p>
                     <button
                       onClick={handleViewMoreClick}
                       className="inline-block rounded-md border border-transparent bg-blue-700 px-8 py-4 text-center font-medium text-white hover:bg-blue-900 transition-all duration-300 hover:scale-110 "
@@ -126,7 +126,7 @@ export const Index = () => {
                 <li className='font-bold'>Corrección de actividades:</li>
                 <p>CodeGemma</p>
                 <p>Phi 3</p>
-                <p>OpenGpt</p>
+                <p>OpenChat</p>
               </div>
             </HorizontalCardComponent>
           </div>
