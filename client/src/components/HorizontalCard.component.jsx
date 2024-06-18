@@ -12,7 +12,7 @@ export const HorizontalCardComponent = ({ img = "", title = "", cardTitle = "", 
                     zIndex: 1
                 }}
             >
-                <h2 style={{ textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }} className="font-bold px-5 text-xl pt-[55%] z-20 relative text-white">{cardTitle}</h2>
+                <h3 style={{ textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }} className="font-bold px-5 text-xl pt-[55%] z-20 relative text-white">{cardTitle}</h3>
                 <div className="absolute inset-0 bg-gray-900 opacity-0 group-hover:opacity-50 transition-opacity z-10"></div>
             </div>
 

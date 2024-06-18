@@ -56,9 +56,9 @@ export const Index = () => {
                     <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl max-w-lg">
                       Potencia tu productividad con &lt;CodeTrain/&gt;
                     </h1>
-                    <p className="mt-4 text-xl text-gray-500 pb-4">
-                      La aplicación de chat de IA de última generación, lleva tu rendimiento al siguiente nivel.
-                    </p>
+                    <title className="mt-4 text-xl text-gray-500 pb-4">
+                      La plataforma potenciada con IA para lleva tu rendimiento y aprendizaje al siguiente nivel.
+                    </title>
                     <button
                       onClick={handleViewMoreClick}
                       className="inline-block rounded-md border border-transparent bg-blue-700 px-8 py-4 text-center font-medium text-white hover:bg-blue-900 transition-all duration-300 hover:scale-110 "
@@ -77,7 +77,7 @@ export const Index = () => {
 
         {/* //! MAS INFORMACION */}
         <section ref={secondSectionRef} className='bg-slate-800 text-center pt-5 p-10'>
-          <h1 className='font-bold text-center text-white text-3xl pb-20'>¿Qué es <span className='font-bold bg-gradient-to-t from-red-500 to-fuchsia-500 via-cyan-300 text-transparent bg-clip-text'>&lt;CodeTrain/&gt;</span>?</h1>
+          <h2 className='font-bold text-center text-white text-3xl pb-20'>¿Qué es <span className='font-bold bg-gradient-to-t from-red-500 to-fuchsia-500 via-cyan-300 text-transparent bg-clip-text'>&lt;CodeTrain/&gt;</span>?</h2>
 
           <div className='flex flex-col space-y-5'>
             <HorizontalCardComponent orientation={1} img='https://th.bing.com/th/id/OIP.OC4Bv5A3iYKPvSQFaWjwVwHaHc?w=634&h=638&rs=1&pid=ImgDetMain' cardTitle='¿Sobre que va la plataforma?' title='¡Conoce a &lt;CodeTrain/&gt;!' description='CodeTrain es una plataforma de cursos y formaciones inteligente e interactiva para la enseñanza de programación que incorpora interacción con modelos IA de lenguaje multimodal, capaz de ofrecer un entorno enriquecedor y dinámico para aprender a programar de manera efectiva y atractiva.
